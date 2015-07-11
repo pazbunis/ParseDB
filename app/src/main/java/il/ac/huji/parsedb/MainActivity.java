@@ -4,11 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.parse.Parse;
 import com.parse.ParseObject;
-import com.parse.ParseRelation;
-import com.parse.ParseUser;
-
 
 public class MainActivity extends ActionBarActivity {
 
@@ -17,21 +13,20 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Parse generated values:
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "tlSBXlbDo127MbG97Ho7SmPT2lykEF5VQnhRV9np", "7CaFriBEOzaurDaJwtOtCn9vOxeB6iwsUsSUOE2F");
-
-        ParseObject gameScore = new ParseObject("Item");
+        //Adding simple rows to a relation:
+        ParseObject gameScore = new ParseObject("Item"); // "Item" is an object class (can be thought of as a table)
         gameScore.put("score", 1337);
         gameScore.put("playerName", "Sean Plott");
         gameScore.put("cheatMode", false);
         gameScore.saveInBackground();
 
         gameScore = new ParseObject("Item");
-        gameScore.put("score", 1337);
+        gameScore.put("score", 1338);
         gameScore.put("playerName", "Sean Plott");
         gameScore.put("cheatMode", false);
         gameScore.saveInBackground();
+
+
     }
 
     @Override

@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">ParseDB</string>
+    <string name="app_name">ParseApplication</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
 </resources>
